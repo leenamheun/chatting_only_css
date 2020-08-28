@@ -1,0 +1,279 @@
+
+body{
+    background-color: #8cc4f8;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+.frame{
+    width: 100%;
+    
+}
+
+.header{
+    padding: 10px 20px;
+    border-bottom: 1px #444444 solid;
+}
+.logo { 
+    width: 60px;
+}
+
+.main { 
+    display: flex;
+    position: absolute;
+    max-width: 1000px;
+    min-width: 1000px;
+    max-height: 700px;
+    min-height: 500px;
+    background-color: #fff;
+    margin: 60px 100px; /* 헤더 없을경우 */
+    height: 80%; 
+    border-radius: 1em;
+    
+}
+
+.listScope { 
+    width: 430px;
+    flex-basis: 1;
+    background-color:#20263f;
+    color:#fff;
+    font-size: 10px;
+    overflow-y: scroll;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+   
+}
+
+.listScope {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.listScope::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+ .chatListHeader { 
+    border-top-left-radius: 1em;
+    position: fixed;
+    height: 100px;
+    width: 430px;
+    background-color: #20263f;
+    border-bottom: #2d3658 1px solid;
+    font-weight: 30;
+}
+.chatListHeader .headerTop { 
+    display:flex;
+    justify-content: space-between;
+    margin: 20px 10px 10px 5px;
+    
+}
+
+.chatListHeader .headerTop .fa-search {
+    flex: 1;
+}
+
+.chatListHeader .headerTop .fas {
+    padding: 0 15px;
+    font-size: 15px;
+}
+
+.chatListHeader .headerBottom { 
+    display:flex;
+    justify-content: flex-end;
+    margin: 20px 10px 10px 10px;
+}
+
+.chatListHeader .headerBottom .fas {
+    padding: 3px 8px 10px 5px;
+    font-size: 10px;
+}
+
+/*채팅 리스트 - 메시지 리스트 */
+
+.chatList{
+    padding-top:100px;/*헤더크기만큼*/
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.chatListItem{
+    height: 80px;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.chatListItem .userIcon{
+    padding: 0 20px;
+    width: 100px;
+}
+
+.userIcon img{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+
+.chatListItem .msgInfo{
+    /* width: 350px; */
+    flex:auto;
+    padding:0 4px;
+}
+
+.chatListItem .sendUser{
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.chatListItem .sendMessage{
+    padding-top: 5px;
+}
+
+.chatListItem .addInfo{
+    width:23%;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    /* flex-direction: column;
+    align-items: center; */
+}
+
+
+.chatListItem .addInfo .icon{
+    padding-top: 3px;
+}
+
+
+/*-- 채팅방-- */
+
+
+.roomScope {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.roomScope::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.roomScope{
+    width: calc(100% - 430px); 
+    background-color: rgb(241, 247, 252);  
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.roomHeader { 
+    position: fixed;
+    width: calc(100% - 430px); 
+    display:flex;
+    justify-content: space-between ;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    border-bottom: 1px #b7bbca solid;
+}
+
+.roomScope .userIcon{
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.roomScope .userName{
+    flex:1;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
+}
+
+
+/*message*/
+
+.msgList{
+    padding: 0 20px;
+    padding-top: 75px;
+    font-weight:50;
+}
+
+.msgItem{
+    display: flex;
+    padding: 20px 0;
+    width:100%;
+    position: relative;
+}
+
+.you{
+    width: 100%;;
+    padding-right: 100px;
+}
+
+.msgItem .userIcon{
+    width:150px;
+    margin: 0 45px;
+}
+
+.message { 
+    padding: 30px 30px;
+    box-shadow: 0px 0px 20px 0px #b7c6fd;
+    position: relative;
+}
+
+.you .message{
+   border-radius: 0 2em 2em 2em;
+   justify-content: flex-start;
+   background-color: #20263f;
+   color:#fff;
+}
+
+
+ .you .message:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    top:0px;
+    left: -20px;
+    height: 0;
+    border:solid 1px;
+    border-width: 0px 30px 30px 0px;
+    border-color: transparent #20263f transparent transparent ;
+  } 
+
+
+.me {
+    flex-direction: row-reverse;
+    padding-left: 100px;
+}
+
+.me .message{
+    padding: 30px 30px;
+    border-radius: 2em 0 2em 2em;
+    justify-content: flex-start;
+    background-color: #f1f3fc;
+    color:#20263f;
+    font-weight: 500;
+ }
+ 
+ .me .message::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    top:0px;
+    right: -20px;
+    height: 0;
+    border:solid 1px;
+    border-width: 0px 0px 30px 30px;
+    border-color: transparent transparent transparent #f1f3fc ;
+ 
+} 
+
+
+
+
