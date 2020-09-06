@@ -3,6 +3,7 @@ body{
     background-color: #8cc4f8;
     overflow-y:hidden;
     overflow-x:hidden;
+    display:grid;
     place-items: center;
 
 }
@@ -12,25 +13,53 @@ body{
     max-width: 1000px;
     min-width: 800px;
     max-height: 800px;
-    height: 86vh;
-    background-color: #fff;
-    margin: 60px 0; /* 헤더 없을경우 */
-    border-radius: 1em;
-    display:grid;
-    grid-template-rows: 1fr 5fr;
-    grid-template-columns: 1fr 2fr;
+    height: 100vh;
 }
 
-/* 채팅ㄹ ㅣ스트 헤더 */
-.chatListHeader { 
-    border-top-left-radius: 1em;
-    /*position: fixed;
+.header{
+    padding: 10px 20px;
+    border-bottom: 1px #444444 solid;
+}
+.logo { 
+    width: 60px;
+}
+
+.main { 
+    width: 100%;
+    background-color: #fff;
+    margin: 60px 0; /* 헤더 없을경우 */
+    height: 80%; 
+    border-radius: 1em;
+}
+
+.listScope { 
     width: 430px;
-    height: 100px;*/
+    flex-basis: 1;
+    background-color:#20263f;
+    color:#fff;
+    font-size: 10px;
+    overflow-y: scroll;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+   
+}
+
+.listScope {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.listScope::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+ .chatListHeader { 
+    border-top-left-radius: 1em;
+    position: fixed;
+    height: 100px;
+    width: 430px;
     background-color: #20263f;
     border-bottom: #2d3658 1px solid;
     font-weight: 30;
-    color:#fff;
 }
 
 .chatListHeader .headerTop { 
@@ -60,30 +89,13 @@ body{
     font-size: 10px;
 }
 
-.chatListItem .userIcon{
-    padding: 0 20px;
-    width: 100px;
-}
-
-
 /*채팅 리스트 - 메시지 리스트 */
-.chatList {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-.chatList::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
-}
 
 .chatList{
+    padding-top:100px;/*헤더크기만큼*/
     overflow-y:auto;
     overflow-x:hidden;
-    width: 430px;
-    background-color: #20263f;
-    border-bottom: #2d3658 1px solid;
-    color:#fff;
 }
-
 
 .chatListItem{
     height: 80px;
@@ -110,7 +122,7 @@ body{
 }
 
 .chatListItem .sendUser{
-    padding-bottom: 2px;
+    padding-bottom: 5px;
     font-size: 15px;
     font-weight: 900;
 }
@@ -125,52 +137,68 @@ body{
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
-
+    /* flex-direction: column;
+    align-items: center; */
 }
+
 
 .chatListItem .addInfo .icon{
     padding-top: 3px;
 }
 
 
+/*-- 채팅방-- */
 
-/* 채팅방 헤더*/
+
+.roomScope {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.roomScope::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.roomScope{
+    width: calc(100% - 430px); 
+    background-color: rgb(241, 247, 252);  
+    overflow-y:auto;
+}
+
 .roomHeader { 
+    position:fixed;
     background-color: rgb(241, 247, 252); 
+    width: 560px;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-between ;
     align-items: center;
     height: 70px;
     padding: 0 20px;
     border-bottom: 1px #b7bbca solid;
 }
 
-.roomHeader .userIcon{
+.roomScope .userIcon{
     width: 35px;
     height: 35px;
     margin: 5px;
 }
 
-
-
-
- 
-
-/* 채팅방리스트 */
-
-.msgList {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-.msgList::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+.roomScope .userName{
+    flex:1;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
 }
 
+
+/*message*/
 
 .msgList{
-    overflow-y:auto;
-    overflow-x:hidden;
     padding: 0 20px;
+    padding-top: 75px;
     font-weight:50;
 }
 
@@ -181,27 +209,14 @@ body{
     position: relative;
 }
 
-.msgItem .userIcon{
-    width: 180px;
-    height:50px;
-}
-
-
- .you .userIcon{
-    margin-right:30px;
-}
-
-.me .userIcon{
-    margin-left:30px;
-}
-
-
-
-
-
 .you{
     width: 100%;;
     padding-right: 100px;
+}
+
+.msgItem .userIcon{
+    width:150px;
+    margin: 0 45px;
 }
 
 .message { 
@@ -260,5 +275,7 @@ body{
     border-color: transparent transparent transparent #f1f3fc ;
  
 } 
+
+
 
 
