@@ -132,11 +132,15 @@ i {
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
-   
+    font-size: 0.6rem;
+}
+.chatListItem .addInfo i{
+    padding-top:3.8px;
 }
 
 .chatListItem .addInfo .time{
     padding-right:8px;
+    font-size: 0.8rem;
 }
 
 
