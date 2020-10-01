@@ -383,12 +383,13 @@ i {
 @media screen and (max-width:600px){
     .frame{
         width: 95%;
+        min-width: 400px;
         display:grid;
         grid-template-rows: 5fr;
         grid-template-columns: 5fr;
     }
     .inputForm .inputEtc{
-        width: 25%;
+        width: 30%;
     }
 
     .inputForm .inputEtc .icons{
