@@ -6,6 +6,9 @@ body{
     place-items: center;
 
 }
+i {
+    cursor: pointer;
+}
 
 .frame{
     width: 100%;
@@ -82,6 +85,9 @@ body{
     background-color: #20263f;
     border-bottom: #2d3658 1px solid;
     color:#fff;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border-bottom-left-radius: 1em;
 }
 
 
@@ -90,6 +96,7 @@ body{
     display:flex;
     justify-content: space-between;
     padding: 10px 0;
+    border-bottom: #3b3e50 1px solid;
 }
 
 .chatListItem .userIcon{
@@ -125,17 +132,19 @@ body{
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
-
+   
 }
 
-.chatListItem .addInfo .icon{
-    padding-top: 3px;
+.chatListItem .addInfo .time{
+    padding-right:8px;
 }
+
 
 
 
 /* 채팅방 헤더*/
 .roomHeader { 
+    border-top-right-radius: 1em;
     background-color: rgb(241, 247, 252); 
     display:flex;
     justify-content: space-between;
@@ -262,3 +271,54 @@ body{
 } 
 
 
+/* 하단 입력영역*/
+
+.inputForm{
+    border-bottom-right-radius: 1em;
+    background-color: rgb(241, 247, 252); 
+    display:flex;
+    height: 60px;
+    align-content: center;
+    justify-content: space-between;
+   
+}
+
+
+.inputForm .inputBx{
+    width: 65%;
+    text-align: start;
+    margin: 10px 15px;
+}
+
+.inputForm .inputBx input{
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.inputForm .inputEtc{
+    width: 35%;
+    margin: 10px 5px;
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+    border-left: #d2daf5 1px solid;
+    cursor: pointer;
+}
+
+
+
+.inputForm .inputEtc .icons{
+    width: 60%;
+    margin: 10px 5px;
+    display:flex;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 0.4rem;
+}
+
+.inputForm .inputEtc .sendBtn{  
+    font-size: 0.5rem;
+    padding: 0px 18px;
+    border-left: #d2daf5 1px solid;
+   
+}
