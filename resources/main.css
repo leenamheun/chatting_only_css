@@ -11,9 +11,7 @@ i {
 }
 
 .frame{
-    width: 100%;
-    max-width: 1000px;
-    min-width: 800px;
+    width: 80%;
     max-height: 800px;
     height: 86vh;
     background-color: #fff;
@@ -355,7 +353,8 @@ i {
 
 @media screen and (max-width:980px){
     .frame{
-        width: 80%;
+        width: 95%;
+        height: 95%;
         min-width: 400px;
         display:grid;
         grid-template-rows: 5fr;
@@ -383,6 +382,7 @@ i {
 @media screen and (max-width:600px){
     .frame{
         width: 95%;
+        height: 95%;
         min-width: 400px;
         display:grid;
         grid-template-rows: 5fr;
