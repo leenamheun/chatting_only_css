@@ -204,10 +204,11 @@ i {
 }
 
 .msgItem .userIcon{
+    min-width: 50px;
     width: 180px;
-    height:50px;
+    height: 60px;
+    margin: 5px;
 }
-
 
  .you .userIcon{
     margin-right:30px;
@@ -217,13 +218,18 @@ i {
     margin-left:30px;
 }
 
+.msgItem .userIcon img{
+    width: 100%;
+    height: 90%;
+    border-radius: 50%;
+}
 
 
 
 
 .you{
     width: 100%;;
-    padding-right: 100px;
+    padding-right: 50px;
 }
 
 .message { 
@@ -231,6 +237,7 @@ i {
     padding: 30px 30px;
     box-shadow: 0px 0px 20px 0px #b7c6fd;
     position: relative;
+  
 }
 
 .you .message{
@@ -238,6 +245,7 @@ i {
    justify-content: flex-start;
    background-color: #20263f;
    color:#fff;
+   margin: 5px 10px 0 10px;
 }
 
 
@@ -257,7 +265,7 @@ i {
 
 .me {
     flex-direction: row-reverse;
-    padding-left: 100px;
+    padding-left: 50px;
 }
 
 .me .message{
@@ -267,6 +275,7 @@ i {
     background-color: #f1f3fc;
     color:#20263f;
     font-weight: 500;
+    margin: 0 10px 5px 10px;
  }
  
  .me .message::after {
@@ -330,6 +339,12 @@ i {
     flex-grow: 1;
 }
 
+.inputForm .inputEtc .icons.more{
+    display: none;
+}
+
+
+
 .inputForm .inputEtc .sendBtn{  
     font-size: 0.5rem;
     padding: 0px 18px;
@@ -359,6 +374,9 @@ i {
     .inputForm{
         border-bottom-left-radius: 1em;
     }
+    .inputForm .inputEtc{
+        width: 35%;
+    }
 }
 
 
@@ -369,5 +387,20 @@ i {
         grid-template-rows: 5fr;
         grid-template-columns: 5fr;
     }
+    .inputForm .inputEtc{
+        width: 25%;
+    }
+
+    .inputForm .inputEtc .icons{
+        text-align: center;
+        font-size: 0.5rem;
+    }
+    .inputForm .inputEtc .icons.all{
+        display: none;
+    }
+    .inputForm .inputEtc .icons.more{
+        display: block;
+    }
+    
    
 }
