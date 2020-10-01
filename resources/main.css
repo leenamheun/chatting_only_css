@@ -79,7 +79,6 @@ i {
 .chatList{
     overflow-y:auto;
     overflow-x:hidden;
-    width: 430px;
     background-color: #20263f;
     border-bottom: #2d3658 1px solid;
     color:#fff;
@@ -124,6 +123,11 @@ i {
 .chatListItem .sendMessage{
     padding-top: 2px;
     font-size: 0.8rem;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
+    width: 180px;
 }
 
 .chatListItem .addInfo{
@@ -221,9 +225,6 @@ i {
     height: 90%;
     border-radius: 50%;
 }
-
-
-
 
 .you{
     width: 100%;;
@@ -351,7 +352,13 @@ i {
 }
 
 
-@media screen and (max-width:980px){
+@media screen and (max-width:1200px){
+    .chatListItem .sendMessage{
+        width:100px;
+    }
+
+
+@media screen and (max-width:1000px){
     .frame{
         width: 95%;
         height: 95%;
@@ -376,6 +383,7 @@ i {
     .inputForm .inputEtc{
         width: 35%;
     }
+   
 }
 
 
@@ -385,8 +393,6 @@ i {
         height: 100%;
         min-width: 400px;
         display:grid;
-        grid-template-rows: 5fr;
-        grid-template-columns: 5fr;
     }
     .inputForm .inputEtc{
         width: 30%;
