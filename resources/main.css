@@ -161,6 +161,15 @@ i {
     border-bottom: 1px #b7bbca solid;
 }
 
+.roomHeader .userName{
+   flex:1;
+   margin: 0 0 4px 10px;
+   font-size: 1.2rem;
+   font-weight: 550;
+   color: 20263f;
+}
+
+
 .roomHeader .userIcon{
     width: 35px;
     height: 35px;
@@ -168,9 +177,6 @@ i {
 }
 
 
-
-
- 
 
 /* 채팅방리스트 */
 
@@ -321,11 +327,47 @@ i {
     align-content: center;
     justify-content: space-around;
     font-size: 0.4rem;
+    flex-grow: 1;
 }
 
 .inputForm .inputEtc .sendBtn{  
     font-size: 0.5rem;
     padding: 0px 18px;
     border-left: #d2daf5 1px solid;
+   
+}
+
+
+@media screen and (max-width:980px){
+    .frame{
+        width: 80%;
+        min-width: 400px;
+        display:grid;
+        grid-template-rows: 5fr;
+        grid-template-columns: 1fr;
+    }
+
+    .chatListHeader{
+        display: none;
+    }
+    .chatList{
+        display: none;
+    }
+    .roomHeader{
+        border-top-left-radius: 1em;
+    }
+    .inputForm{
+        border-bottom-left-radius: 1em;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .frame{
+        width: 95%;
+        display:grid;
+        grid-template-rows: 5fr;
+        grid-template-columns: 5fr;
+    }
    
 }
